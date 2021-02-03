@@ -1,10 +1,15 @@
 {
-  "manifest_version": 3,
+  "manifest_version": 2,
   "name": "Abra",
-  "default_locale": "zh",
   "description": "A page reviewer.",
   "version": "1.0.0",
-  "permissions": ["https://*.google.com/", "activeTab"],
+  "permissions": [
+    "https://*.google.com/",
+    "activeTab",
+    "tabs"
+  ],
+  "web_accessible_resources": [
+  ],
   "browser_action": {
     "default_popup": "popup.html"
   }
