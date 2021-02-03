@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": ".",
+    "target": "ESNext",
+    "module": "ESNext",
+    "jsx": "react",
+    "strictNullChecks": true,
+    "declaration": false,
+    "sourceMap": false,
+    "resolveJsonModule": true,
+    "moduleResolution": "node",
+    "lib": [
+      "esnext",
+      "dom"
+    ],
+    "paths": {
+      "@/libs/*": ["./libs/*"]
+    },
+    "types": [
+      "./typings"
+    ]
+  }
+}
