@@ -1,11 +1,10 @@
 import React from 'react'
+import { HashRouter } from 'react-router-dom'
 
-import styles from './index.module.scss'
+import Routes from './pages/routes'
 
 export default function App() {
   return (
-    <div className={styles.test}>
-      Hello home
-    </div>
+    <HashRouter><Routes /></HashRouter>
   )
 }

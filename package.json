@@ -2,11 +2,13 @@
   "name": "abra",
   "version": "1.0.0",
   "description": "A chrome reviewer. Named by pokemon: ケーシィ.",
-  "main": "webpack.config.js",
+  "main": "main.js",
   "scripts": {
     "start": "npm run dev",
     "clean": "rimraf dist",
-    "dev": "NODE_ENV=development webpack-dev-server",
+    "electron:dev": "cross-env NODE_ENV=development electron .",
+    "electron:prod": "cross-env NODE_ENV=production electron .",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server",
     "build": "npm run clean && NODE_ENV=production webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -14,13 +16,15 @@
     "type": "git",
     "url": "git+https://github.com/yitimo/abra.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "yitimo <admin@yitimo.com>",
+  "license": "UNLICENSED",
+  "private": true,
   "bugs": {
     "url": "https://github.com/yitimo/abra/issues"
   },
   "homepage": "https://github.com/yitimo/abra#readme",
   "dependencies": {
+    "axios": "^0.21.1",
     "electron": "^11.2.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
@@ -33,9 +37,11 @@
     "@babel/preset-react": "^7.12.10",
     "@types/react": "^17.0.1",
     "@types/react-dom": "^17.0.0",
+    "@types/react-router-dom": "^5.1.7",
     "babel-loader": "^8.2.2",
     "babel-plugin-import": "^1.13.3",
     "copy-webpack-plugin": "^6.4.1",
+    "cross-env": "^7.0.3",
     "css-loader": "^5.0.1",
     "css-minimizer-webpack-plugin": "^1.2.0",
     "html-webpack-plugin": "^5.0.0-beta.6",
